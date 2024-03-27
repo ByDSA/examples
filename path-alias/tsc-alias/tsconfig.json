@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "strict": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "paths": {
+      "#modules/*": ["./src/modules/*"]
+    }
+  }
+}

@@ -1,20 +1,19 @@
 {
-  "name": "newm",
+  "name": "subpaths-ts5-4",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf build && tsc",
-    "start": "node build/src/index.js"
+    "start": "node build/index.js"
   },
   "imports": {
-    "#lib/*": "./lib/build/*.js",
-    "#modules/*": "./build/src/modules/*.js"
+    "#modules/*": "./build/modules/*.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "5.3"
+    "typescript": "5.4"
   }
 }

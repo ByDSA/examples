@@ -5,6 +5,8 @@
     "strict": true,
     "outDir": "./build",
     "rootDir": "./src",
-    "declaration": true
+    "paths": {
+      "#modules/*": ["./src/modules/*"]
+    }
   }
 }

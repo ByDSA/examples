@@ -1,0 +1,17 @@
+{
+  "name": "tsc-alias",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && tsc && tsc-alias",
+    "start": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "5.4",
+    "tsc-alias": "1.8.8"
+  }
+}
