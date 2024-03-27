@@ -1,0 +1,20 @@
+{
+  "name": "newm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && tsc",
+    "start": "node build/src/index.js"
+  },
+  "imports": {
+    "#lib/*": "./lib/build/*.js",
+    "#modules/*": "./build/src/modules/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "5.3"
+  }
+}
