@@ -1,0 +1,15 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "singleton:start": "ts-node src/singleton/index.ts",
+    "factory:start": "ts-node src/factory/index.ts",
+    "observer:start": "ts-node src/observer/index.ts",
+    "decorator:start": "ts-node src/decorator/index.ts"
+  },
+  "devDependencies": {
+    "ts-node": "10.9.2"
+  }
+}
