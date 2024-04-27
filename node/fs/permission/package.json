@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-permission --allow-fs-read=* --allow-fs-write=/tmp/ index.js"
+  }
+}
