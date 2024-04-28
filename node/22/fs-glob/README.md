@@ -1,0 +1,1 @@
+Se añade al módulo `node:fs` las funciones `glob` y `globSync` para pattern matching.
