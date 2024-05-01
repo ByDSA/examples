@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socket.io Web Socket Client</title>
+</head>
+
+<body>
+  <p>Mensajes recibidos</p>
+  <output id="messages"></output>
+  <script type="module">
+    import { io } from "https://cdn.socket.io/4.7.5/socket.io.esm.min.js";
+
+    const messages = document.getElementById('messages');
+
+    const socket = io('ws://localhost:1337');
+
+    socket.on("connect", () => {
+      console.log('Socket.IO is connected!');
+      const message = "Hello world from browser!";
+      console.log("Sending:", message);
+      socket.emit("eventMessage", message);
+      socket.emit("eventNumber", 1234);
+    });
+
+    socket.on("disconnect", (reason) => console.log("Disconnected from the Socket.IO server.", "Reason:", reason));
+
+    // Se puede usar el string que se quiera como evento, salvo los eventos especiales usados arriba
+
+    socket.on("eventServer", (message) => {
+      console.log('Received message:', message)
+      messages.innerHTML += `<br /> ${message}`
+    });
+  </script>
+</body>
+
+</html>
