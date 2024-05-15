@@ -13,12 +13,13 @@
   <script type="module">
     import { io } from "https://cdn.socket.io/4.7.5/socket.io.esm.min.js";
 
-    const messages = document.getElementById('messages');
+    const messages = document.getElementById("messages");
 
-    const socket = io('ws://localhost:1337');
+    const PORT = 1337;
+    const socket = io("ws://localhost:" + PORT);
 
     socket.on("connect", () => {
-      console.log('Socket.IO is connected!');
+      console.log("Socket.IO is connected!");
       const message = "Hello world from browser!";
       console.log("Sending:", message);
       socket.emit("eventMessage", message);
@@ -30,7 +31,7 @@
     // Se puede usar el string que se quiera como evento, salvo los eventos especiales usados arriba
 
     socket.on("eventServer", (message) => {
-      console.log('Received message:', message)
+      console.log("Received message:", message)
       messages.innerHTML += `<br /> ${message}`
     });
   </script>
